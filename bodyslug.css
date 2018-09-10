@@ -1,0 +1,66 @@
+@import url("css/font-awesome.min.css");
+
+.wf-loading h1,
+.wf-loading h2,
+.wf-loading h3,
+.wf-loading h4,
+.wf-loading h5,
+.wf-loading h6,
+.wf-loading p,
+.wf-loading li,
+.wf-loading blockquote,
+.wf-loading a,
+.wf-loading label, svg{
+    opacity:0;
+    visibility:hidden;
+}
+
+.wf-active h1,
+.wf-active h2,
+.wf-active h3,
+.wf-active h4,
+.wf-active h5,
+.wf-active h6,
+.wf-active p,
+.wf-active li,
+.wf-active blockquote,
+.wf-active a,
+.wf-active label, svg{
+    visibility:visible;
+    opacity:1;
+    transition:opacity 0.3s linear;
+}
+
+smooth-animation {
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+html, body {
+	-webkit-font-smoothing: antialiased;
+}
+
+@media (min-width: 1600px) {}
+
+@media (min-width: 1200px) {}
+
+@media (min-width: 768px) {}
+
+@media (max-width: 1200px) {}
+
+@media (max-width: 992px) {}
+
+@media (max-width: 767px) {}
+
+@media (max-width: 620px) {}
+
+@media (max-width: 520px) {}
+
+@media (max-width: 440px) {}
+
+@media (max-device-width: 480px) and (orientation: landscape) {}
+
+@media print {}
