@@ -34,43 +34,11 @@ function calloways_content_width() {
 add_action( 'after_setup_theme', 'bodyslug_content_width', 0 );
 
 /**
- * Register widget area.
- */
-//Removed - see Constitutional Functions
-
-/**
- * Enqueue scripts and styles.
- */
-//Removed - see Constitutional Functions
-
-/**
- * Implement the Custom Header feature.
- */
-//Removed - see Constitutional Functions
-
-/**
  * Custom template tags for this theme.
  */
 require get_template_directory() . '/inc/template-tags.php';
 
 /**
- * Functions which enhance the theme by hooking into WordPress.
- */
-//Removed
-
-/**
  * Customizer additions.
  */
 require get_template_directory() . '/inc/customizer.php';
-
-/**
- * Load Jetpack compatibility file.
- */
-//Removed - see Constitutional Functions
-
-/**
- * Load WooCommerce compatibility file.
- */
-//if ( class_exists( 'WooCommerce' ) ) {
-//	require get_template_directory() . '/inc/woocommerce.php';
-//}
