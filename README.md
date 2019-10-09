@@ -15,6 +15,10 @@ Bodyslug.css contains media queries for both original desktop to mobile directio
 
 The empty script.js has the WordPress jQuery function. Write all functions within this so that you can use the localized WordPress version of jQuery. If you need another version, you can use WordPress to reference it but your mileage may vary.
 
+## htaccess
+
+An htaccess that does *not* contain WordPress or SSL information is included. This txt file has expires and caching processes to be added to the htaccess created by the WordPress installation or Web Host. This should be tested prior to the site going live and at this time does not work with hosts like Pantheon.
+
 ## Copyright and license
 
 Original copyright owned by Automattic. I claim no copyright or ownership of this code - I'm just trying to speed up my own workflow.
