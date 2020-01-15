@@ -15,6 +15,11 @@ Bodyslug.css contains media queries for both original desktop to mobile directio
 
 The empty script.js has the WordPress jQuery function. Write all functions within this so that you can use the localized WordPress version of jQuery. If you need another version, you can use WordPress to reference it but your mileage may vary.
 
+## Skip Link Focus.js
+The script.js also combines the Skip Link Focus (minified) at the top of the file. This means you won't have to load that, but you will have to make sure this file is loaded across all pages. Leave the Skip Link Focus in the js folder just in case of this. I did this because I always have this file loading on all pages, at this time, as a general file. I will find a better way to do this, but for now this cleans up my footer from extra JS files.
+
+If you do add this back as a separate file, underscores puts it loading in the <head>. Put it in the footer_scripts where it belongs.
+
 ## htaccess
 
 An htaccess that does *not* contain WordPress or SSL information is included. This txt file has expires and caching processes to be added to the htaccess created by the WordPress installation or Web Host. This should be tested prior to the site going live and at this time does not work with hosts like Pantheon.

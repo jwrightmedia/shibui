@@ -9,7 +9,7 @@
 
 if ( ! function_exists( 'bodyslug_setup' ) ) :
 	function calloways_setup() {
-		load_theme_textdomain( 'calloways', get_template_directory() . '/languages' );
+		load_theme_textdomain( 'bodyslug', get_template_directory() . '/languages' );
 		add_theme_support( 'automatic-feed-links' );
 		add_theme_support( 'title-tag' );
 		add_theme_support( 'post-thumbnails' );
@@ -28,7 +28,7 @@ add_action( 'after_setup_theme', 'bodyslug_setup' );
 /**
  * @global int $content_width
  */
-function calloways_content_width() {
+function bodyslug_content_width() {
 	$GLOBALS['content_width'] = apply_filters( 'bodyslug_content_width', 640 );
 }
 add_action( 'after_setup_theme', 'bodyslug_content_width', 0 );
