@@ -11,6 +11,7 @@
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="theme-color" content="#fafafa">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="apple-touch-icon" href="icon.png">
 	<?php wp_head(); ?>
