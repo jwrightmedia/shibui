@@ -17,6 +17,21 @@
 	</div>
 <?php endif; ?>	
 
+<!-- If/Else based on an toggled option -->
+
+<?php if(get_field('no_tubing_events', 'option') == "hide") { ?>
+	<!-- Empty aka don't show anything -->
+<?php } ?>		
+<?php if(get_field('no_tubing_events', 'option') == "show") { ?>			
+	<div class="events-nav">
+		<div class="container">
+			<div class="col-sm-12">
+				<a href="<?php echo get_home_url(); ?>/events/" class="btn btn-eventnav">All Events</a> <a href="<?php echo get_home_url(); ?>/tag/tubing/" class="btn btn-eventnav">Tubing Events</a>
+			</div>
+		</div>
+	</div>
+<?php } ?>	
+
 <!-- the_field from another page or, in this example, the Option page. -->
 
 <a href="<?php the_field('facebook_link', 'option'); ?>" target="_blank"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
