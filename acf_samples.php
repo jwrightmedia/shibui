@@ -17,6 +17,12 @@
 	</div>
 <?php endif; ?>	
 
+<!-- If/Else without the "else" -->
+
+<?php if ( get_field( 'lineup_numbers_graphic' ) ): ?>
+	<img src="<?php the_field('lineup_numbers_graphic'); ?>" alt="Rockin' the River with your favorite bands!" class="img-responsive center-block hidden-xs">
+<?php else: endif; ?>
+
 <!-- If/Else based on an toggled option -->
 
 <?php if(get_field('no_tubing_events', 'option') == "hide") { ?>
