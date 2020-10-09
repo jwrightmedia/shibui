@@ -8,7 +8,7 @@
  */
 
 if ( ! function_exists( 'bodyslug_setup' ) ) :
-	function calloways_setup() {
+	function bodyslug_setup() {
 		load_theme_textdomain( 'bodyslug', get_template_directory() . '/languages' );
 		add_theme_support( 'automatic-feed-links' );
 		add_theme_support( 'title-tag' );

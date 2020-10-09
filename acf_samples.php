@@ -179,26 +179,26 @@
 
 <!-- Counter for unique id/classes ==== Not proven yet -->
 <?php
-	            if (have_rows('square_box')) : ?>
-	            	<?php $i = 0; ?>
-	            <?php while (have_rows('square_box')) : the_row();?>
-	            	<?php $i++; ?>
-	            <article id="<?php the_sub_field('unique_id'); ?>" class="card sq-<?php echo $i; ?>">
-	            <?php if (get_sub_field('internal_or_external_link') == "internal") { ?>
-	            	<a href="<?php the_sub_field('box_link'); ?>">
-				<?php } ?>	            		
-	            <?php if(get_sub_field('internal_or_external_link') == "external") { ?>
-	            	<a href="<?php the_sub_field('external_link'); ?>" target="_blank">
-				<?php } ?>
-						<div class="card-img">
-							<img src="<?php the_sub_field('top_image'); ?>" class="img-responsive" alt="<?php the_sub_field('title'); ?>">
-						</div>
-	                	<div id="act" class="card-content">
-	                		<h2><?php the_sub_field('title'); ?></h2>
-	                	</div>
-		            </a>
-		        </a></article>
-        		<?php
-            	endwhile;
-	            endif;
-	            ?>
+    if (have_rows('square_box')) : ?>
+    	<?php $i = 0; ?>
+    <?php while (have_rows('square_box')) : the_row();?>
+    	<?php $i++; ?>
+    <article id="<?php the_sub_field('unique_id'); ?>" class="card sq-<?php echo $i; ?>">
+    <?php if (get_sub_field('internal_or_external_link') == "internal") { ?>
+    	<a href="<?php the_sub_field('box_link'); ?>">
+	<?php } ?>	            		
+    <?php if(get_sub_field('internal_or_external_link') == "external") { ?>
+    	<a href="<?php the_sub_field('external_link'); ?>" target="_blank">
+	<?php } ?>
+			<div class="card-img">
+				<img src="<?php the_sub_field('top_image'); ?>" class="img-responsive" alt="<?php the_sub_field('title'); ?>">
+			</div>
+        	<div id="act" class="card-content">
+        		<h2><?php the_sub_field('title'); ?></h2>
+        	</div>
+        </a>
+    </a></article>
+	<?php
+	endwhile;
+    endif;
+?>
