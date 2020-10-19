@@ -1,7 +1,7 @@
 # shibui
 ---
 
-Shibui is a partial port of the theme created by *Underscores.me*. Their wonderful bare bones theme has served me well as a custom theme, for many years. To help speed up my process of project setup, this repo contains my most modified files, to save me time during project setup. Probably someday I'll make this automated, but I think any developer knows how you are always changing, tweaking, and rebuilding...and the rent is just too damn high, sometimes.
+Shibui is a partial port of the theme created by *Underscores.me*. Their wonderful bare-bones theme has served me well as a custom theme, for many years. To help speed up my process of project setup, this repo contains my most modified files, to save me time during the project setup. Probably someday I'll make this automated, but I think any developer knows how you are always changing, tweaking, and rebuilding...and the rent is just too damn high, sometimes.
 
 In Japanese, Shibui is a term meaning a particular aesthetic of simple, subtle, and unobtrusive beauty. For more information, please research Wabi Sabi, if you wish to know more.
 
