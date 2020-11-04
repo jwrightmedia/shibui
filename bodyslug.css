@@ -77,6 +77,11 @@ body {
 *
 */
 
+/* IE BS */
+@media all and (-ms-high-contrast:none) {
+  /*IE 10 and up doesn't let you do the IF IE anymore. So you have to do it this way.*/
+}
+
 /* Mobile first method */
  
 @media (min-width: 320px) {}
