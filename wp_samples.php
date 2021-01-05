@@ -5,6 +5,10 @@
 *
 */?>
 
+<!-- Get Site URL -->
+
+<a href="<?php echo get_site_url(); ?>/this-page/this-content/">Click here</a>
+
 <!-- Get Stylesheet URI -->
 
 <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/aternus.png" alt="" width="" height="" />
