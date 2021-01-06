@@ -151,6 +151,10 @@
 	</div>
 </div>
 
+<!-- do_shortcode with whole shortcode in field -->
+
+<?php echo do_shortcode( get_field('shortcode_for_mailchimp', 'option') );?>
+
 <!-- Row fix for repeaters - not proven yet -->
 
 <section class="home-page-selling-points container-fluid">
