@@ -2,7 +2,6 @@
 * Advanced Custom Fields Samples
 *
 * Examples to save time from having to Google them.
-*
 */?>
 
 <!-- If/Else and endif -->
@@ -38,9 +37,13 @@
 	</div>
 <?php } ?>	
 
-<!-- the_field from another page or, in this example, the Option page. -->
+<!-- the_field from the Option page. -->
 
 <a href="<?php the_field('facebook_link', 'option'); ?>" target="_blank"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
+
+<!-- the_field from a specific page  -->
+
+<a href="<?php the_field('facebook_link', 7); ?>" target="_blank"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
 
 <!-- if have_rows -->
 
@@ -181,9 +184,8 @@
         </div>
     </section>
 
-<!-- Counter for unique id/classes ==== Not proven yet -->
-<?php
-    if (have_rows('square_box')) : ?>
+<!-- Counter for unique id/classes -->
+<?php if (have_rows('square_box')) : ?>
     	<?php $i = 0; ?>
     <?php while (have_rows('square_box')) : the_row();?>
     	<?php $i++; ?>
@@ -202,7 +204,4 @@
         	</div>
         </a>
     </a></article>
-	<?php
-	endwhile;
-    endif;
-?>
+<?php endwhile; endif; ?>
