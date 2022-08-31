@@ -86,6 +86,66 @@
 <?php else : ?>
 <?php endif; ?>
 
+<style>
+.circle {
+  stroke: #ffdf5d;
+  stroke-dasharray: 650;
+  stroke-dashoffset: 650;
+  -webkit-transition: all 0.5s ease-in-out;
+  opacity: 0.3;
+}
+
+.playBut {
+  display: inline-block;
+  -webkit-transition: all 0.5s ease;
+}
+
+.playBut svg {
+  position: absolute;
+  top: -10px;
+  left: 34%;
+  max-width: 110px;
+}
+
+.playBut .triangle {
+  -webkit-transition: all 0.7s ease-in-out;
+  stroke-dasharray: 240;
+  stroke-dashoffset: 480;
+  stroke: #7dd7f8;
+  transform: translateY(0);
+}
+
+.playBut:hover .triangle {
+  stroke-dashoffset: 0;
+  opacity: 1;
+  stroke: #ffdf5d;
+  animation: nudge 0.7s ease-in-out;
+}
+
+@keyframes nudge {
+  0% {
+    transform: translateX(0);
+  }
+  30% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  70% {
+    transform: translateX(-2px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.playBut:hover .circle {
+  stroke-dashoffset: 0;
+  opacity: 1;
+}
+</style>
+
 <!-- Two usages of custom breadcrumbs -->
 
 <div class="container bread-contain"> 

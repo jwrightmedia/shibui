@@ -1,7 +1,7 @@
 <?php /*		
 * WP Snippet Samples
 *
-* Examples to save time from having to Google them.
+* Examples to save time.
 *
 */?>
 

@@ -15,7 +15,7 @@
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="apple-touch-icon" href="icon.png">
 	<?php wp_head(); ?>
-	<!--[if IE]>
+	<!--[if lt IE 9]>
     	<script src="<?php echo get_template_directory_uri(); ?>/js/html5shiv.min.js"></script>
 	<![endif]-->
 </head>
