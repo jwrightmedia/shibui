@@ -25,6 +25,7 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'bodyslug' ); ?></a>
 	<header id="masthead" class="site-header">
+		<!-- FOR BOOTSTRAP 3 ONLY -->
 		<div class="container">
 			<div class="site-branding">
 				<div class="navbar-header">
@@ -60,4 +61,25 @@
 			    </div>
 			</nav><!-- #site-navigation -->
 		</div>
+		<!-- FOR BOOTSTRAP 4 ONLY -->
+		<nav class="navbar navbar-expand-md" role="navigation">
+		  <div class="container">
+		    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-controls="bs-example-navbar-collapse-1" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'bodyslug' ); ?>">
+		        <span class="navbar-toggler-icon"></span>
+		    </button>
+		    <a class="navbar-brand" href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/logo.jpg" class="img-fluid" alt="Business Name"/></a>
+		        <?php
+		        wp_nav_menu( array(
+		            'theme_location'    => 'primary',
+		            'depth'             => 2,
+		            'container'         => 'div',
+		            'container_class'   => 'collapse navbar-collapse',
+		            'container_id'      => 'bs-example-navbar-collapse-1',
+		            'menu_class'        => 'nav navbar-nav ml-auto',
+		            'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
+		            'walker'            => new WP_Bootstrap_Navwalker(),
+		        ) );
+		        ?>
+		    </div>
+		</nav>
 	</header><!-- #masthead -->
