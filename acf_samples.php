@@ -146,26 +146,6 @@
 }
 </style>
 
-<!-- Two usages of custom breadcrumbs -->
-
-<div class="container bread-contain"> 
-	<div class="breadcrumbs">
-		<?php custom_breadcrumbs(); ?> <!-- if completely controlled by custom function in functions.php or Constitutional Functions plugin -->
-	</div>
-</div>
-
-<div class="container bread-contain"> <!-- for special circumstances when you need to fake it -->
-	<div class="breadcrumbs">
-		<ul id="breadcrumbs" class="breadcrumbs">
-			<li class="item-home"><a href="/" class="bread-link bread-home">Home</a></li>
-			<li class="separator separator-home"> › </li>
-			<li class="item-parent"><a href="/venue/">Rental</a></li>
-			<li class="separator separator-child"> › </li>
-			<li class="item-current item-child"><?php the_title( '<strong>', '</strong>' ); ?></li>
-		</ul>
-	</div>
-</div>
-
 <!-- have_rows for Bootstrap Carousel -->
 
 <section class="home-section hero">
@@ -218,31 +198,31 @@
 
 <?php echo do_shortcode( get_field('shortcode_for_mailchimp', 'option') );?>
 
-<!-- Row fix for repeaters - not proven yet -->
+<!-- Row fix for repeaters -->
 
 <section class="home-page-selling-points container-fluid">
-        <?php $i = 1; ?>
-        <div class="row">
-            <?php
-            if (have_rows('selling_points')) :
-                while (have_rows('selling_points')) : the_row();
-            ?>
-            <div class="col-sm-3">
-                <img src="<?php echo get_sub_field('selling_point_icon')['url'] ?>" alt="">
-                <h3><?php the_sub_field('selling_point_title'); ?></h3>
-                <p><?php the_sub_field('selling_point_text'); ?></p>
-            </div>
-            <?php
-                    if ($i == 4) {
-                        echo '</div><div class="row">';
-                        $i = 0;
-                    }
-                    $i++;
-                endwhile;
-            endif;
-            ?>
+    <?php $i = 1; ?>
+    <div class="row">
+        <?php
+        if (have_rows('selling_points')) :
+            while (have_rows('selling_points')) : the_row();
+        ?>
+        <div class="col-sm-3">
+            <img src="<?php echo get_sub_field('selling_point_icon')['url'] ?>" alt="">
+            <h3><?php the_sub_field('selling_point_title'); ?></h3>
+            <p><?php the_sub_field('selling_point_text'); ?></p>
         </div>
-    </section>
+        <?php
+                if ($i == 4) {
+                    echo '</div><div class="row">';
+                    $i = 0;
+                }
+                $i++;
+            endwhile;
+        endif;
+        ?>
+    </div>
+</section>
 
 <!-- Counter for unique id/classes -->
 <?php if (have_rows('square_box')) : ?>

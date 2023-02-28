@@ -144,3 +144,23 @@
 		<?php get_sidebar();?>
 	</div>
 </div>
+
+<!-- Two usages of custom breadcrumbs -->
+
+<div class="container bread-contain"> 
+	<div class="breadcrumbs">
+		<?php custom_breadcrumbs(); ?> <!-- if completely controlled by custom function in functions.php or Constitutional Functions plugin -->
+	</div>
+</div>
+
+<div class="container bread-contain"> <!-- for special circumstances when you need to fake it -->
+	<div class="breadcrumbs">
+		<ul id="breadcrumbs" class="breadcrumbs">
+			<li class="item-home"><a href="/" class="bread-link bread-home">Home</a></li>
+			<li class="separator separator-home"> › </li>
+			<li class="item-parent"><a href="/venue/">Rental</a></li>
+			<li class="separator separator-child"> › </li>
+			<li class="item-current item-child"><?php the_title( '<strong>', '</strong>' ); ?></li>
+		</ul>
+	</div>
+</div>
