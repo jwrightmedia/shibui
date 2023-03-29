@@ -22,7 +22,7 @@
 	<img src="<?php the_field('lineup_numbers_graphic'); ?>" alt="Rockin' the River with your favorite bands!" class="img-responsive center-block hidden-xs">
 <?php else: endif; ?>
 
-<!-- If/Else based on an toggled option -->
+<!-- If/Else based on an toggled option - field from options/settings page -->
 
 <?php if(get_field('no_tubing_events', 'option') == "hide") { ?>
 	<!-- Empty aka don't show anything -->
