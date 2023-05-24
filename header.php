@@ -12,8 +12,11 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="theme-color" content="#fafafa">
+	<link rel="manifest" href="/manifest.webmanifest">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
-	<link rel="apple-touch-icon" href="icon.png">
+	<link rel="icon" href="/favicon.ico" sizes="any"><!-- 32×32 -->
+	<link rel="icon" href="/icon.svg" type="image/svg+xml">
+	<link rel="apple-touch-icon" href="/apple-touch-icon.png"><!-- 180×180 -->
 	<?php wp_head(); ?>
 	<!--[if lt IE 9]>
     	<script src="<?php echo get_template_directory_uri(); ?>/js/html5shiv.min.js"></script>
@@ -78,6 +81,27 @@
 		            'menu_class'        => 'nav navbar-nav ml-auto',
 		            'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
 		            'walker'            => new WP_Bootstrap_Navwalker(),
+		        ) );
+		        ?>
+		    </div>
+		</nav>
+		<!-- Bootstrap 5 Only -->
+		<nav class="navbar navbar-expand-lg" role="navigation">
+		  <div class="container">
+		    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapse" aria-controls="collapse" aria-expanded="false" aria-label="Toggle navigation">
+		      <span class="navbar-toggler-icon"></span>
+		    </button>
+		    <a class="navbar-brand" href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/logo.jpg" class="img-fluid" alt="Wall of Fame"/></a>
+		        <?php
+		        wp_nav_menu( array(
+		            'theme_location'    => 'primary',
+		            'depth'             => 2,
+		            'container'         => 'div',
+		            'container_class'   => 'collapse navbar-collapse',
+		            'container_id'      => 'collapse',
+		            'menu_class'        => 'navbar-nav ms-auto',
+		            //'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
+		            //'walker'            => new WP_Bootstrap_Navwalker(),
 		        ) );
 		        ?>
 		    </div>
