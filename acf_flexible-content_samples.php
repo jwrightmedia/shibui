@@ -1,8 +1,24 @@
 <?php /*		
 * Advanced Custom Fields Samples - Flexible Content
-*
+* =================================================
 * Examples specific to Flexible Content
 */?>
+
+<!-- Standard Flexible Content -->
+
+
+<?php if( have_rows('home') ):
+	while ( have_rows('home') ) : the_row();
+		
+		if (get_row_layout() == 'hero'):
+			include('template-parts/home/hero.php');
+		elseif( get_row_layout() == 'diagram' ):
+			include('template-parts/home/diagram.php');
+		endif;
+
+	endwhile;
+else :
+endif; ?>
 
 <!-- Main template -- includes global override -->
 
@@ -23,12 +39,11 @@ if (have_rows('page_builder')) : ?>
 
 		if (get_row_layout() == 'builder_hero') : // Hero
 			get_template_part('template-parts/page-builder/builder-hero');
-
+			
 		elseif (get_row_layout() == 'builder_hero_cta') : // Hero with CTA
 			get_template_part('template-parts/page-builder/builder-hero-cta');
 
 		elseif (get_row_layout() == 'how_it_works') :
-
             if($overrideHow) {
                 get_template_part('template-parts/global-how-it-works');
             } else {
@@ -43,7 +58,7 @@ if (have_rows('page_builder')) : ?>
 endif;
 get_footer(); ?>
 
-<!-- global flexible content template example - remove 'option' for showing content unique to a page -->
+<!-- Global flexible content template example - remove 'option' for showing content unique to a page -->
 
 <?php if (have_rows('how_it_works_global_content', 'option')) : ?>
     <div class="how-wrapper">

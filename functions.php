@@ -7,22 +7,25 @@
  * @package bodyslug
  */
 
-if ( ! function_exists( 'bodyslug_setup' ) ) :
-	function bodyslug_setup() {
-		load_theme_textdomain( 'bodyslug', get_template_directory() . '/languages' );
-		add_theme_support( 'automatic-feed-links' );
-		add_theme_support( 'title-tag' );
-		add_theme_support( 'post-thumbnails' );
-		add_theme_support( 'html5', array(
+ function bodyslug_setup() {
+	load_theme_textdomain( 'empty', get_template_directory() . '/languages' );
+	add_theme_support( 'automatic-feed-links' );
+	add_theme_support( 'title-tag' );
+	add_theme_support( 'post-thumbnails' );
+	add_theme_support(
+		'html5',
+		array(
 			'search-form',
 			'comment-form',
 			'comment-list',
 			'gallery',
 			'caption',
-		) );
-		add_theme_support( 'customize-selective-refresh-widgets' );
-	}
-endif;
+			'style',
+			'script',
+		)
+	);
+	add_theme_support( 'customize-selective-refresh-widgets' );
+}
 add_action( 'after_setup_theme', 'bodyslug_setup' );
 
 /**

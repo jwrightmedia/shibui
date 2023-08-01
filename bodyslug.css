@@ -1,30 +1,31 @@
-smooth-animation {
-  -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
-  -ms-transition: all 0.3s;
-  -o-transition: all 0.3s;
-  transition: all 0.3s;
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;0,900;1,300;1,400&display=swap');
+
+:root {
+  --black: #000;
+  --white: #fff
+}
+::selection {
+	background: var(--replace);
+	color: var(--replace);
+}
+::-moz-selection {
+	background: var(--replace);
+	color: var(--replace);
 }
 
-/* IE 10+ fixes - depreciated */
-@media all and (-ms-high-contrast:none) {
-  /*IE 10 and up doesn't let you do the IF IE anymore. So you have to fix things this way.*/
+html {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 106.25%;
 }
-
-/* Bootstrap 4 and below Mobile First method */
- 
-@media (min-width: 320px) {}
-
-@media (min-width: 480px) {}
-
-@media (max-device-width: 480px) and (orientation: landscape) {/* When a phone is turned horizontally.*/}
-
-@media (min-width: 768px) {}
-
-@media (min-width: 992px) {}
-
-@media (min-width: 1200px) {}
-
-@media (min-width: 1600px) {}
-
-@media print {}
+body {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  font: normal 100%/1.5 'Source Sans Pro', sans-serif;
+  font-display: auto;
+  font-weight: normal;
+  font-style: normal;
+  background: var(--white);
+  color: var(--black);
+  word-break: break-word;
+  overflow-wrap: break-word;
+}

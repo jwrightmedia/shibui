@@ -1,6 +1,6 @@
 <?php /*		
 * WP Snippet Samples
-*
+* ==================
 * Examples to save time.
 *
 */?>
