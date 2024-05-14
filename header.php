@@ -100,6 +100,8 @@
 		            'container_class'   => 'collapse navbar-collapse',
 		            'container_id'      => 'collapse',
 		            'menu_class'        => 'navbar-nav ms-auto',
+					'link_class'   		=> 'nav-link',
+					'list_item_class'  	=> 'nav-item',
 		            //'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
 		            //'walker'            => new WP_Bootstrap_Navwalker(),
 		        ) );
